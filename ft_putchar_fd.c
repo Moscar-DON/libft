@@ -1,47 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 12:39:01 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/21 10:18:49 by operez-d         ###   ########.fr       */
+/*   Created: 2022/09/21 10:54:14 by operez-d          #+#    #+#             */
+/*   Updated: 2022/09/21 11:44:38 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	ft_putchar_fd(char c, int fd)
 {
-	unsigned int	i;
-	char			*str;
-	size_t			len;
-	
-	if (!s || !f)
-		return (0);
-	i = 0;
-	len = ft_strlen((char *)s);
-	str = malloc(len);
-	while (s[i])
-	{
-		str[i] = f(i, s[i]);
-		i++;
-	}
-	return (str);
+	write(fd, &c, 1);
 }
 /*
-char	ft_changechr(unsigned int i, char w)
-{
-	return (w + i);
-}
-
-
 int main()
 {
-	char	str[]="Hello World";
-	char	*res;
+	int		fd;	
+	char	c;
 	
-	res = ft_strmapi(str, ft_changechr);
-	printf("%s\n", res);
+	c = 'a';
+	fd = 1; //0 in, 1 out
+	ft_putchar_fd(c, fd);
 }*/

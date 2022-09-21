@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 17:07:31 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/18 18:49:48 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/21 11:18:03 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,18 @@ char	*ft_strtrim(char const *s1, char const *set)
 	rep = 0;
 	while (s1[i])
 	{
-		j = 0;
-		while (set[j])
+		j = -1;
+		while (set[++j])
 		{
 			if (s1[i] == set[j])
 				rep = 1;
-			j++;
 		}
 		if (rep == 0)
 			str[k++] = (char)s1[i];
 		i++;
 		rep = 0;
 	}
+	str[k] = '\0';
 	return (str);
 }
 /*

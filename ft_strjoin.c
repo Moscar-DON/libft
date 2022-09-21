@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 16:25:18 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/18 17:07:10 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/21 11:10:50 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	lens1 = ft_strlen((char *)s1);
 	lens2 = ft_strlen((char *)s2);
-	str = malloc(lens1 + lens2);
+	str = malloc(lens1 + lens2 + 1);
 	i = 0;
 	while (i <= lens1)
 	{
@@ -35,6 +35,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		lens1++;
 		i++;
 	}
+	str[lens1 + lens2 + 1] = '\0';
 	return (str);
 }
 /*

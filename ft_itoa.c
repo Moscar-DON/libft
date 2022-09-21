@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 19:04:32 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/20 14:04:15 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/21 12:02:09 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	ft_nbrsize(int n)
 	return (size);
 }
 
-static char	*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	char	*str;
 	int		size;
@@ -35,6 +35,11 @@ static char	*ft_itoa(int n)
 	size = ft_nbrsize(n);
 	str = malloc(size + 1);
 	str[size--] = '\0';
+	if (n == -2147483648)
+	{
+		str = "-2147483648";
+		return (str);
+	}
 	if (n == 0)
 		str[0] = '0';
 	if (n < 0)
@@ -54,7 +59,7 @@ int	main()
 {
 	int	n;
 
-	n = 128902189;
+	n = -2147483648;
 	printf("%d\n", n);
 	printf("%s\n", ft_itoa(n));
 }*/

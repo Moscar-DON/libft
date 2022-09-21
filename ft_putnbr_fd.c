@@ -1,47 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/19 12:39:01 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/21 10:18:49 by operez-d         ###   ########.fr       */
+/*   Created: 2022/09/21 11:48:37 by operez-d          #+#    #+#             */
+/*   Updated: 2022/09/21 12:06:50 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	ft_putnbr_fd(int n, int fd)
 {
-	unsigned int	i;
-	char			*str;
-	size_t			len;
-	
-	if (!s || !f)
-		return (0);
-	i = 0;
-	len = ft_strlen((char *)s);
-	str = malloc(len);
-	while (s[i])
-	{
-		str[i] = f(i, s[i]);
-		i++;
-	}
-	return (str);
+	char	*nbr;
+	int		i;
+
+	nbr = ft_itoa(n);
+	i = -1;
+	while (nbr[++i] != 0)
+		write(fd, &nbr[i], 1);
 }
 /*
-char	ft_changechr(unsigned int i, char w)
-{
-	return (w + i);
-}
-
-
 int main()
 {
-	char	str[]="Hello World";
-	char	*res;
+	int		fd;	
+	int	n;
 	
-	res = ft_strmapi(str, ft_changechr);
-	printf("%s\n", res);
+	n = -2147483648;
+	fd = 1; //0 in, 1 out
+	ft_putnbr_fd(n, fd);
 }*/

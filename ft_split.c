@@ -6,16 +6,17 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 18:50:12 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/20 15:48:19 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/21 12:32:51 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_countsplit(char const *s, char c)
+static int	ft_countstrs(char const *s, char c)
 {	
 	int		i;
 	int		count;
+
 	i = 0;
 	count = 0;
 	while (s[i] != '\0')
@@ -24,29 +25,29 @@ int	ft_countsplit(char const *s, char c)
 			count++;
 		i++;
 	}
-	return (count);
+	return (count + 1);
 }
-/////SEGMENTATION FAULT/////////
-char const	*ft_strsplit(char const *s, char c, unsigned int index, char** matrix)
+
+static char const	*ft_strsplit(char const *s, char c, int i, char **matrix)
 {
 	int		len;
 	int		j;
 	int		k;
 
-	j = 0;	
-	while (s[j] != c)
+	j = 0;
+	while (!(s[j] == c || s[j] == '\0'))
 		j++;
-	j++;
 	len = 0;
 	k = 0;
-	matrix[index] = malloc(j + 1);
-	while (s[len] != c || s[len] != '\0')
+	matrix[i] = malloc(j + 1);
+	while (!(s[len] == c || s[len] == '\0'))
 	{
-		matrix[index][k] = s[len];
+		matrix[i][k] = s[len];
 		len++;
 		k++;
 	}
-	return (&s[j]);
+	matrix[i][k] = 0;
+	return (&s[j + 1]);
 }
 
 char	**ft_split(char const *s, char c)
@@ -54,8 +55,8 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	char	**matrix;
 	int		count;
-	
-	count = ft_countsplit(s, c);
+
+	count = ft_countstrs(s, c);
 	matrix = malloc((count + 1) * sizeof(char *));
 	i = 0;
 	while (i < count)
@@ -63,12 +64,13 @@ char	**ft_split(char const *s, char c)
 		s = ft_strsplit(s, c, i, matrix);
 		i++;
 	}
+	matrix[i] = NULL;
 	return (matrix);
 }
-
+/*
 int	main()
 {
-	char	str[] = "Hola Buenas";
+	char	str[] = "Hola Buensaaas";
 	char	**matrix;
 	int		i;
 	
@@ -76,8 +78,8 @@ int	main()
 	i = 0;
 	while (matrix[i])
 	{
+		printf("%d", i + 1);
 		printf("%s\n", matrix[i]);
 		i++;
 	}
-	
-}
+}*/

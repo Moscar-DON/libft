@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 10:32:33 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/16 18:06:37 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/21 12:33:35 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <stdlib.h>
 
 # include <stdio.h>
+# include "s_list.h"
 
 int		ft_isalpha(int num);
 int		ft_isdigit(int num);
@@ -46,5 +47,7 @@ void 	*ft_calloc(size_t count, size_t size);
 char 	*ft_strdup(const char *s1);
 
 char	*ft_substr(char const *s, unsigned int start, size_t len);
+
+char	*ft_itoa(int n);
 
 #endif
