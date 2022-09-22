@@ -6,11 +6,10 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 16:18:57 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/15 13:01:59 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/22 14:47:34 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)

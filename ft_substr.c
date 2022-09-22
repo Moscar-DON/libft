@@ -6,12 +6,12 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 18:00:39 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/21 11:19:01 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/22 14:43:54 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	unsigned int	lenstr;

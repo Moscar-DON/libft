@@ -6,23 +6,23 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 11:32:38 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/20 14:50:07 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/22 14:45:07 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_calloc(size_t count, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
 	int		*i;
 	size_t	n;
-	
+
 	n = count * size;
 	i = malloc(n);
 	ft_bzero(i, n);
 	return (i);
 }
-
+/*
 int main() 
 {
 	int *p;
@@ -54,4 +54,4 @@ int main()
 	}
 	free(p);
 	free(q);
-}
+}*/

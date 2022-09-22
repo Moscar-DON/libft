@@ -6,11 +6,10 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 17:18:08 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/15 12:59:38 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/22 14:47:37 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
 #include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)

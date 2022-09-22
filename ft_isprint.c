@@ -6,11 +6,12 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 16:42:00 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/13 16:19:21 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/22 14:45:56 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 int	ft_isprint(int num)
 {
 	if ((num >= 0 && num <= 31) || num == 127)

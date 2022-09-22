@@ -6,19 +6,20 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 17:06:48 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/16 16:35:32 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/22 14:39:28 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 int	ft_strlen(char *str)
 {
-	int i;
+	int	i;
 
-    i = 0;
+	i = 0;
 	while (str[i])
-        i++;
-    return (i);
+		i++;
+	return (i);
 }
 /*
 #include <string.h>

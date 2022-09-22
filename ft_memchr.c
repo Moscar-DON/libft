@@ -6,11 +6,12 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 13:10:38 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/19 12:49:15 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/22 14:47:27 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 void	*ft_memchr(const void *str, int c, size_t n)
 {
 	unsigned char	*a;

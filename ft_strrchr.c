@@ -6,25 +6,26 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 11:21:49 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/15 13:08:03 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/22 14:43:38 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 char	*ft_strrchr(const char *s, int c)
 {
 	int		len;
 	char	*str;
-	
+
 	len = 0;
 	str = (char *)s;
 	while (str[len])
 		len++;
-	while (str[len - 1] )
+	while (str[len - 1])
 	{
 		if (str[len] == c)
 			return (&str[len]);
-		len--;	
+		len--;
 	}
 	return (0);
 }

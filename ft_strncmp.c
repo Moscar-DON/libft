@@ -6,16 +6,17 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 11:41:47 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/15 13:07:52 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/22 14:42:55 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	x;
 	size_t	cnt;
-	
+
 	x = 0;
 	cnt = 0;
 	while ((s1[x] || s2[x]) && x < n)
@@ -25,7 +26,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		cnt += (s1[x] - s2[x]);
 		x++;
 	}
-	return (cnt);	
+	return (cnt);
 }
 /*
 #include <string.h>

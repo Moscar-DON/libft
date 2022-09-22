@@ -1,35 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/15 09:58:45 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/22 14:44:11 by operez-d         ###   ########.fr       */
+/*   Created: 2022/09/21 15:21:07 by operez-d          #+#    #+#             */
+/*   Updated: 2022/09/22 14:56:13 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+void	*ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (c >= 97 && c <= 122)
-		c -= 32;
-	return (c);
+	new->next = *lst;
+	*lst = new;
+	return (lst);
 }
 /*
-#include <ctype.h>
-#include <stdio.h>
 int	main()
 {
-	unsigned char	l;
-	unsigned char	a;
+	char	str[] = "Primero";
+	char	str2[] = "Segundo";
+	t_list	**lst;
+	t_list	*elem1;
+	t_list	*elem2;
 	
-	l = 'C';
-	a = toupper(l);
-	printf("%c", a);
-	printf("\n-----------\n");
-	a = ft_toupper(l);
-	printf("%c", a);
+	elem1 = ft_lstnew((void *)str);
+	elem2 = ft_lstnew((void *)str2);
+	lst = &elem1;
+	printf("%s\n", lst[0]->content);
+	printf("============\n");
+	ft_lstadd_front(lst, elem2);
+	printf("%s\n", lst[0]->content);
+	printf("%s\n", lst[0]->next->content);
 }*/

@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 14:27:32 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/16 17:22:07 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/22 14:30:50 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,10 +26,10 @@ void	ft_bzero(void *s, size_t n)
 	}
 	return (*s);
 }
-
+/*
 #include <string.h>
 #include <stdio.h>
-/*
+
 int main()
 {
 	char	str1[]="Hello World";

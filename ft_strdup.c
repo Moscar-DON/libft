@@ -6,22 +6,22 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 13:21:32 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/16 17:15:30 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/22 14:36:43 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strdup(const char *s1)
+char	*ft_strdup(const char *s1)
 {
 	char	*str;
 	int		i;
 	int		len;
-	
+
 	len = ft_strlen((char *)s1);
-	str = malloc(len * sizeof *s1);
+	str = malloc(len * sizeof * s1);
 	i = 0;
-	while(s1[i])
+	while (s1[i])
 	{
 		str[i] = s1[i];
 		i++;
