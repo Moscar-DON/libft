@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 18:13:37 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/16 15:44:09 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/23 16:42:52 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,30 +19,31 @@ int	ft_atoi(const char *str)
 	int	i;
 
 	i = 0;
-	neg = 0;
+	neg = 1;
 	num = 0;
-	if (str[0] == '-')
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
+		i++;
+	if (str[i] == '-')
 	{
-		neg = 1;
+		neg = -1;
 		i++;
 	}
-	if (str[i] >= '0' && str[i] <= '9')
-		num += str[i] - '0';
-	while (str[i + 1] >= '0' && str[i + 1] <= '9')
+	if (str[i] == '+')
+		i++;
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		num *= 10;
-		num += (str[i + 1] - '0');
+		num += str[i] - '0'; 
+		if (str[i + 1] >= '0' && str[i + 1] <= '9')
+			num *= 10;
 		i++;
 	}
-	if (neg == 1)
-		num *= -1;
-	return (num);
+	return (num * neg);
 }
 /*
 #include <stdio.h>
 int main()
 {
-    const char    *str = "-123s1";
+    const char    *str = "999999999999999999999999";
 
     printf("%d", atoi(str));
 	printf("\n-----------\n");

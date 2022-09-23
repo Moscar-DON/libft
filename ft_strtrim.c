@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 17:07:31 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/21 11:18:03 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/23 18:40:59 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	k;
 	int		rep;
 
-	str = malloc(ft_strlen((char *)s1));
+	str = malloc(ft_strlen((char *)s1)+ 1);
+	if (!str)
+		return (0);
 	i = 0;
 	k = 0;
 	rep = 0;

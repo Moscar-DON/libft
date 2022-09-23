@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 13:21:32 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/22 14:36:43 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/23 17:01:02 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ char	*ft_strdup(const char *s1)
 	int		len;
 
 	len = ft_strlen((char *)s1);
-	str = malloc(len * sizeof * s1);
+	str = malloc((len * sizeof * s1) + 1);
+	if (!(str))
+		return (0);
 	i = 0;
 	while (s1[i])
 	{

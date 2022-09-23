@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 11:32:38 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/22 14:45:07 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/23 16:49:56 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_calloc(size_t count, size_t size)
 
 	n = count * size;
 	i = malloc(n);
+	if (!(i))
+		return (0);
 	ft_bzero(i, n);
 	return (i);
 }

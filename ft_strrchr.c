@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 11:21:49 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/22 14:43:38 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/23 10:05:20 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,8 @@ char	*ft_strrchr(const char *s, int c)
 
 	len = 0;
 	str = (char *)s;
-	while (str[len])
-		len++;
-	while (str[len - 1])
+	len = ft_strlen(str);
+	while (len >= 0)
 	{
 		if (str[len] == c)
 			return (&str[len]);
@@ -34,11 +33,11 @@ char	*ft_strrchr(const char *s, int c)
 #include <stdio.h>
 int	main()
 {
-	char	s[20] = "AgAsasAjudAd";
+	char	*s = "\0there is so many in this string !";
 	int		c;
 	
 	
-	c = 'a';
+	c = '\0';
 	printf("%s", strrchr(s, c));
 	printf("\n-----------\n");
 	printf("%s", ft_strrchr(s, c));

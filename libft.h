@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 10:32:33 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/22 14:50:32 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/22 16:18:00 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,7 @@ char	*ft_strdup(const char *s1);//
 char	*ft_substr(char const *s, unsigned int start, size_t len);//
 char	*ft_itoa(int n);//
 t_list	*ft_lstnew(void *content);
+void	*ft_lstadd_front(t_list **lst, t_list *new);
+
 
 #endif

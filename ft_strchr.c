@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 10:33:35 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/22 14:35:45 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/22 19:22:16 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,24 +19,21 @@ char	*ft_strchr(const char *s, int c)
 
 	i = 0;
 	str = (char *)s;
-	while (str[i])
+	while (str[i] != c)
 	{
-		if (str[i] == c)
-			return (&str[i]);
+		if (str[i] == '\0')
+			return (0);
 		i++;
 	}
-	return (0);
+	return (&str[i]);
 }
 /*
-#include <string.h>
-#include <stdio.h>
 int	main()
 {
-	char	s[20] = "AgasysAjudd";
+	char	s[20] = "Agasys\0Ajudd";
 	int		c;
 	
-	
-	c = 'a';
+	c = '\0';
 	printf("%s", strchr(s, c));
 	printf("\n-----------\n");
 	printf("%s", ft_strchr(s, c));

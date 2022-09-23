@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 16:18:57 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/22 14:47:34 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/22 17:26:28 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,9 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char	*d;
 	unsigned char	*s;
 	size_t			i;
-
+	
+	if (!src && !dest)
+		return (0);
 	d = dest;
 	s = (unsigned char *)src;
 	i = 0;

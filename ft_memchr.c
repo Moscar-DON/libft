@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 13:10:38 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/22 14:47:27 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/22 18:49:12 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	*ft_memchr(const void *str, int c, size_t n)
 {
-	unsigned char	*a;
-	int				i;
-
-	a = (unsigned char *)str;
+	char	*a;
+	unsigned int	i;
+	
+	a = (char *)str;
 	i = 0;
 	while (n > 0)
 	{
@@ -26,7 +26,7 @@ void	*ft_memchr(const void *str, int c, size_t n)
 		i++;
 		n--;
 	}
-	return (a);
+	return (0);
 }
 /*
 #include <stdio.h>

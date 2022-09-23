@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 18:00:39 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/22 14:43:54 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/23 18:15:04 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,36 +14,42 @@
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned int	lenstr;
 	char			*sub;
 	int				i;
 	unsigned int	lensub;
+	unsigned int	lenstr;
 
-	i = 0;
-	sub = malloc(len);
-	lenstr = ft_strlen((char *)s);
-	lensub = start + len;
-	if (start > lenstr)
+	if (!s)
 		return (0);
-	while (start < lensub)
+	lenstr = ft_strlen((char *)s);
+	if (start > lenstr)
 	{
-		sub[i] = s[start];
-		i++;
-		start++;
+		sub = malloc(1);
+		if (!sub)
+			return (0);
+		*sub = 0;
+		return (sub);
 	}
+	sub = malloc(len + 1);
+	if (!sub)
+		return (0);
+	lensub = start + len;
+	i = 0;
+	while (start < lensub)
+		sub[i++] = s[start++];
 	sub[i] = '\0';
 	return (sub);
 }
 /*
 int	main()
 {
-	char	str[] = "ABcdefGH";
+	char	str[] = "01234";
 	char	*sub;
 	int		pos;
 	int		len;
 	
-	pos = 0;
-	len = 1;
+	pos = 10;
+	len = 10;
 	sub = ft_substr(str, pos, len);
 	printf("%s\n", sub);
 }*/

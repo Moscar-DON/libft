@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/22 12:21:07 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/22 15:47:39 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/22 16:33:40 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,18 @@
 int	ft_lstsize(t_list *lst)
 {
 	int	i;
-	
-	i = 0;
-	while(lst)
-}
 
+	i = 0;
+	if (lst == NULL)
+		return (0);
+	while (lst->next != NULL)
+	{
+		lst = lst->next;
+		i++;
+	}
+	return (i);
+}
+/*
 int	main()
 {
 	char	str[] = "Primero";
@@ -32,4 +39,5 @@ int	main()
 	elem2 = ft_lstnew((void *)str2);
 	lst = &elem1;
 	ft_lstadd_front(lst, elem2);
-}
+	printf("%d",ft_lstsize(lst[0]));
+}*/
