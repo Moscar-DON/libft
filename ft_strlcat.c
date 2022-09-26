@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 12:11:16 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/23 11:21:06 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/26 12:17:12 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,7 @@ int	ft_strlcat(char *dest, char *src, size_t size)
 	if (size != 0)
 	{
 		while (src[y] != '\0' && (x < size - 1))
-		{
-			dest[x] = src[y];
-			y++;
-			x++;
-		}
+			dest[x++] = src[y++];
 		dest[x] = '\0';
 		if (size > x)
 			return (len_dest + len_src);

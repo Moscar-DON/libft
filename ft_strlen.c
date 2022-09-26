@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 17:06:48 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/22 19:02:41 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/26 15:23:37 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,9 @@ int	ft_strlen(char *str)
 	return (i);
 }
 /*
-#include <string.h>
-#include <stdio.h>
-
 int main()
 {
-    char    a[]="sdifhdsijcjoisdfuusd sdhfuiidsuf98e8w9 aaf &/#@¢@#¢";
+    char    a[]="123";
 	
 
     printf("%d", ft_strlen(&a[0]));

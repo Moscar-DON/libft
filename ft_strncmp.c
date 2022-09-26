@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 11:41:47 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/23 10:28:34 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/26 12:15:42 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (cnt);
 }
-
+/*
 #include <string.h>
 #include <stdio.h>
 int	main()
@@ -41,4 +41,4 @@ int	main()
 	printf("%d", strncmp(s1, s2, c));
 	printf("\n-----------\n");
 	printf("%d", ft_strncmp(s1, s2, c));
-}
+}*/

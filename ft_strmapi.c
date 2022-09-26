@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/19 12:39:01 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/22 14:40:09 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/26 12:13:17 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,16 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	size_t			len;
 
 	if (!s || !f)
-		return (0);
+	{
+		str = malloc(1);
+		str[0] = 0;
+		return (str);
+	}
 	i = 0;
 	len = ft_strlen((char *)s);
-	str = malloc(len);
+	str = ft_calloc(len + 1, sizeof(char));
+	if (!str)
+		return (0);
 	while (s[i])
 	{
 		str[i] = f(i, s[i]);

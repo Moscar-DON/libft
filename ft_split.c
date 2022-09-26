@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 18:50:12 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/21 12:32:51 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/26 12:23:38 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ static int	ft_countstrs(char const *s, char c)
 {	
 	int		i;
 	int		count;
-
+	
+	if (!s)
+		return (0);
 	i = 0;
 	count = 0;
 	while (s[i] != '\0')

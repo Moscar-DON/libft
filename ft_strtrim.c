@@ -6,11 +6,28 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 17:07:31 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/23 18:40:59 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/26 13:56:52 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+/*char	*ft_strtrim(char const *s1, char const *set)
+{
+	char	*str;
+	int		start;
+	int		end;
+	
+	if (!s1 || !set)
+		return (0);
+	str = ft_calloc(ft_strlen((char *)s1)+ 1, sizeof(char));
+	if (!str)
+		return (0);
+	start = 0;
+	while (s1 && !ft_strchr(set, s1[start]))
+		start++;
+	
+}*/
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -19,8 +36,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	j;
 	size_t	k;
 	int		rep;
-
-	str = malloc(ft_strlen((char *)s1)+ 1);
+	
+	if (!s1 || !set)
+		return (0);
+	
+	str = ft_calloc(ft_strlen((char *)s1)+ 1, sizeof(char));
 	if (!str)
 		return (0);
 	i = 0;
@@ -39,14 +59,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i++;
 		rep = 0;
 	}
-	str[k] = '\0';
 	return (str);
 }
 /*
 int	main()
 {
-	char	str[] = "Hola Amigo ¿Sabes donde esta la biblioteca?";
-	char	str2[] = "HAsbic ";
+	char	str[] = "AEIOUaeiou ";
+	char	str2[] = "";
 	char	*sub;
 
 	sub = ft_strtrim(str, str2);

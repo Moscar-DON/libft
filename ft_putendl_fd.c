@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:38:10 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/22 14:48:10 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/26 11:34:08 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putendl_fd(char *s, int fd)
 {
 	int	i;
 
+	if (s == 0)
+		return ;
 	i = -1;
 	while (s[++i] != 0)
 		write(fd, &s[i], 1);

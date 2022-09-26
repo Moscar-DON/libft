@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 11:32:38 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/23 16:49:56 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/26 16:01:29 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,17 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	int		*i;
+	int		*str;
 	size_t	n;
-
+	
 	n = count * size;
-	i = malloc(n);
-	if (!(i))
+	if (n == 1 && count != 1)
+		return (NULL);
+	str = malloc(n);
+	if (!(str))
 		return (0);
-	ft_bzero(i, n);
-	return (i);
+	ft_bzero(str, n);
+	return ((void *)str);
 }
 /*
 int main() 

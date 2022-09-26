@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 11:21:49 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/23 10:05:20 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/26 15:17:40 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strrchr(const char *s, int c)
 	len = ft_strlen(str);
 	while (len >= 0)
 	{
-		if (str[len] == c)
+		if (str[len] == (unsigned char)c)
 			return (&str[len]);
 		len--;
 	}

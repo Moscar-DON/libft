@@ -6,44 +6,54 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 18:13:37 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/23 16:42:52 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/26 16:31:24 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	ft_longvalue(size_t n, int neg)
+{
+	if (n > 2147483647 && neg > 0)
+		return (-1);
+	if (n > 2147483648 && neg < 0)
+		return (0);
+	return (1);
+}
+
 int	ft_atoi(const char *str)
 {
-	int	num;
-	int	neg;
-	int	i;
+	size_t	num;
+	int			neg;
+	int			i;
 
 	i = 0;
 	neg = 1;
 	num = 0;
 	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
 		i++;
-	if (str[i] == '-')
+	if (str[i] == '-' || str[i] == '+')
 	{
-		neg = -1;
+		if (str[i] == '-')
+			neg = -1;
 		i++;
 	}
-	if (str[i] == '+')
-		i++;
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		num += str[i] - '0'; 
+		num += str[i] - '0';
 		if (str[i + 1] >= '0' && str[i + 1] <= '9')
 			num *= 10;
 		i++;
 	}
+	if (ft_longvalue(num, neg) == 0 || ft_longvalue(num, neg) == -1)
+		return (ft_longvalue(num, neg));
 	return (num * neg);
 }
 /*
 #include <stdio.h>
 int main()
 {
-    const char    *str = "999999999999999999999999";
+    const char    *str = "9223372036854775809";
 
     printf("%d", atoi(str));
 	printf("\n-----------\n");
