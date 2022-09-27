@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 17:07:31 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/26 16:56:57 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/27 15:16:01 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 int	main()
 {
 	char	str[] = "AEIOUaeiou ";
-	char	str2[] = "";make clean
+	char	str2[] = "";
 	char	*sub;
 
 	sub = ft_strtrim(str, str2);

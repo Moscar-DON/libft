@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 18:50:12 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/26 12:23:38 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/27 18:57:12 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,24 @@ static int	ft_countstrs(char const *s, char c)
 {	
 	int		i;
 	int		count;
+	int		find;
 	
 	if (!s)
 		return (0);
 	i = 0;
 	count = 0;
+	find = 0;
+	while (s[i] && s[i] == c)
+		i++;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c)
+		if (s[i] == c && find == 0)
+		{
 			count++;
+			find = 1;
+		}
+		else if (s[i] != c && find == 1)
+			find = 0;
 		i++;
 	}
 	return (count + 1);
@@ -32,51 +41,58 @@ static int	ft_countstrs(char const *s, char c)
 
 static char const	*ft_strsplit(char const *s, char c, int i, char **matrix)
 {
-	int		len;
 	int		j;
 	int		k;
-
+	int		pos;
+	
+	pos = 0;
 	j = 0;
+	while (s[pos] == c || s[pos] == '\0')
+		pos++;
 	while (!(s[j] == c || s[j] == '\0'))
 		j++;
-	len = 0;
 	k = 0;
 	matrix[i] = malloc(j + 1);
-	while (!(s[len] == c || s[len] == '\0'))
+	if (!matrix[i])///////////////////////////////posible error///////////////////////////////////
+		while (i-- >= 0)
+			free(matrix[i]);
+	while (!(s[pos] == c || s[pos] == '\0'))
 	{
-		matrix[i][k] = s[len];
-		len++;
+		matrix[i][k] = s[pos];
+		pos++;
 		k++;
 	}
 	matrix[i][k] = 0;
-	return (&s[j + 1]);
+	return (&s[pos + 1]);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	int		i;
+	int		word;
 	char	**matrix;
 	int		count;
 
 	count = ft_countstrs(s, c);
 	matrix = malloc((count + 1) * sizeof(char *));
-	i = 0;
-	while (i < count)
+	if (!matrix)
+		return (0);
+	word = 0;
+	while (word < count)
 	{
-		s = ft_strsplit(s, c, i, matrix);
-		i++;
+		s = ft_strsplit(s, c, word, matrix);
+		word++;
 	}
-	matrix[i] = NULL;
+	matrix[word] = NULL;
 	return (matrix);
 }
 /*
 int	main()
 {
-	char	str[] = "Hola Buensaaas";
+	char	str[] = "\0aa\0bbb";
 	char	**matrix;
 	int		i;
 	
-	matrix = ft_split(str, 'a');
+	matrix = ft_split(str, '\0');
 	i = 0;
 	while (matrix[i])
 	{
