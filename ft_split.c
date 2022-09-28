@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 18:50:12 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/27 18:57:12 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/28 13:23:40 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	ft_countstrs(char const *s, char c)
 	int		i;
 	int		count;
 	int		find;
-	
+
 	if (!s)
 		return (0);
 	i = 0;
@@ -27,16 +27,25 @@ static int	ft_countstrs(char const *s, char c)
 		i++;
 	while (s[i] != '\0')
 	{
-		if (s[i] == c && find == 0)
+		if (s[i] != c && find == 0)
 		{
 			count++;
 			find = 1;
 		}
-		else if (s[i] != c && find == 1)
+		else if (s[i] == c && find == 1)
 			find = 0;
 		i++;
 	}
-	return (count + 1);
+	return (count);
+}
+
+static void	ft_freematrix(char **matrix, int i)
+{
+	while (i >= 0)
+	{
+		free(matrix[i]);
+		i--;
+	}
 }
 
 static char const	*ft_strsplit(char const *s, char c, int i, char **matrix)
@@ -44,7 +53,7 @@ static char const	*ft_strsplit(char const *s, char c, int i, char **matrix)
 	int		j;
 	int		k;
 	int		pos;
-	
+
 	pos = 0;
 	j = 0;
 	while (s[pos] == c || s[pos] == '\0')
@@ -52,10 +61,12 @@ static char const	*ft_strsplit(char const *s, char c, int i, char **matrix)
 	while (!(s[j] == c || s[j] == '\0'))
 		j++;
 	k = 0;
-	matrix[i] = malloc(j + 1);
-	if (!matrix[i])///////////////////////////////posible error///////////////////////////////////
-		while (i-- >= 0)
-			free(matrix[i]);
+	matrix[i] = malloc((j + 1) * sizeof (char));
+	if (!matrix[i])
+	{
+		ft_freematrix(matrix, i);
+		return (NULL);
+	}
 	while (!(s[pos] == c || s[pos] == '\0'))
 	{
 		matrix[i][k] = s[pos];
@@ -88,11 +99,11 @@ char	**ft_split(char const *s, char c)
 /*
 int	main()
 {
-	char	str[] = "\0aa\0bbb";
+	char	str[] = "olol";
 	char	**matrix;
 	int		i;
 	
-	matrix = ft_split(str, '\0');
+	matrix = ft_split(str, ' ');
 	i = 0;
 	while (matrix[i])
 	{
