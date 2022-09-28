@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/21 15:21:07 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/28 16:55:00 by operez-d         ###   ########.fr       */
+/*   Created: 2022/09/28 16:49:05 by operez-d          #+#    #+#             */
+/*   Updated: 2022/09/28 17:06:22 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	new->next = *lst;
-	*lst = new;
-	return (lst);
+	if (lst == NULL)
+		return (0);
+	while ((*lst)->next != NULL)
+		lst = &(*lst)->next;
+	lst->next = *new;
 }
+
 /*
 int	main()
 {
@@ -32,7 +35,7 @@ int	main()
 	lst = &elem1;
 	printf("%s\n", lst[0]->content);
 	printf("============\n");
-	ft_lstadd_front(lst, elem2);
+	ft_lstadd_back(lst, elem2);
 	printf("%s\n", lst[0]->content);
 	printf("%s\n", lst[0]->next->content);
 }*/
