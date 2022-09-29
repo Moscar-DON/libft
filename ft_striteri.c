@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 10:06:17 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/21 10:53:31 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/29 10:59:12 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,14 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	unsigned int	i;
 
-	if (!s || !f)
-		return ;
-	i = 0;
-	while (s[i])
+	if (s && f)
 	{
-		f(i, s + i);
-		i++;
+		i = 0;
+		while (s[i])
+		{
+			f(i, s + i);
+			i++;
+		}
 	}
 }
 /*

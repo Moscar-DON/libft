@@ -1,46 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/22 12:21:07 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/29 14:43:34 by operez-d         ###   ########.fr       */
+/*   Created: 2022/09/29 16:17:05 by operez-d          #+#    #+#             */
+/*   Updated: 2022/09/29 16:48:54 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+void ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	int	i;
+	t_list *i;
 	
 	if (lst)
 	{
-		i = 1;
-		while (lst->next != NULL)
+		while ((*lst))
 		{
-			lst = lst->next;
-			i++;
+			i = (*lst)->next;
+			ft_lstdelone(*lst, del);
+			*lst = i;	
 		}
-		return (i);
 	}
-	return (0);
 }
+
 /*
+void	ft_lstdel(void *content)
+{
+	content = NULL;
+	free(content);
+}
+
 int	main()
 {
-	char	str[] = "Primero";
-	char	str2[] = "Segundo";
-	t_list	*lst;
+	char	*content = "hello !";
+	char	*content2 = "bye !";
+	t_list	*list;
 	t_list	*elem1;
 	t_list	*elem2;
-	
-	elem1 = ft_lstnew(str);
-	elem2 = ft_lstnew(str2);
-	lst = elem1;
-	lst->next = elem2;
-	lst->next->next = ft_lstnew("a");
-	printf("%d",ft_lstsize(lst));
+
+	elem1 = ft_lstnew((void *)content); 
+	elem2 = ft_lstnew((void *)content2);
+	list = elem1;
+	list->next = elem2;
+	printf("%d\n",ft_lstsize(list));
+	ft_lstclear(&list, ft_lstdel);
+	printf("%d\n",ft_lstsize(list));
 }*/

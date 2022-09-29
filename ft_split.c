@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 18:50:12 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/28 13:23:40 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/29 14:39:25 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,11 +99,11 @@ char	**ft_split(char const *s, char c)
 /*
 int	main()
 {
-	char	str[] = "olol";
+	char	str[] = "\0aaa\0bbb";
 	char	**matrix;
 	int		i;
 	
-	matrix = ft_split(str, ' ');
+	matrix = ft_split(str, '\0');
 	i = 0;
 	while (matrix[i])
 	{

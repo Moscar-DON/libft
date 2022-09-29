@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 15:21:07 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/28 16:55:00 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/29 10:25:21 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	new->next = *lst;
 	*lst = new;
-	return (lst);
 }
 /*
 int	main()
