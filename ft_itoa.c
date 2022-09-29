@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 19:04:32 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/26 11:07:21 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/29 18:12:33 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static int	ft_intmincase(int n, void *str)
 	{
 		i = -1;
 		auxstr = "-2147483648";
-		while (++i <= 12)
+		while (++i < 12)
 			nstr[i] = auxstr[i];
 		return (1);
 	}
