@@ -6,11 +6,14 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 18:50:12 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/29 14:39:25 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/30 17:43:04 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+#include <stdio.h>
+#include <unistd.h>
 
 static int	ft_countstrs(char const *s, char c)
 {	
@@ -46,6 +49,7 @@ static void	ft_freematrix(char **matrix, int i)
 		free(matrix[i]);
 		i--;
 	}
+	free(matrix);
 }
 
 static char const	*ft_strsplit(char const *s, char c, int i, char **matrix)
@@ -96,19 +100,3 @@ char	**ft_split(char const *s, char c)
 	matrix[word] = NULL;
 	return (matrix);
 }
-/*
-int	main()
-{
-	char	str[] = "\0aaa\0bbb";
-	char	**matrix;
-	int		i;
-	
-	matrix = ft_split(str, '\0');
-	i = 0;
-	while (matrix[i])
-	{
-		printf("%d", i + 1);
-		printf("%s\n", matrix[i]);
-		i++;
-	}
-}*/

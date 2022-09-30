@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 18:13:37 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/26 16:31:24 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/30 12:26:02 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ static int	ft_longvalue(size_t n, int neg)
 int	ft_atoi(const char *str)
 {
 	size_t	num;
-	int			neg;
-	int			i;
+	int		neg;
+	int		i;
 
 	i = 0;
 	neg = 1;
@@ -49,13 +49,3 @@ int	ft_atoi(const char *str)
 		return (ft_longvalue(num, neg));
 	return (num * neg);
 }
-/*
-#include <stdio.h>
-int main()
-{
-    const char    *str = "9223372036854775809";
-
-    printf("%d", atoi(str));
-	printf("\n-----------\n");
-    printf("%d", ft_atoi(str)); 
-}*/

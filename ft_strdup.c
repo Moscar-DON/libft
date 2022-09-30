@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 13:21:32 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/23 17:01:02 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/30 12:27:14 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,19 +31,3 @@ char	*ft_strdup(const char *s1)
 	str[i] = '\0';
 	return (str);
 }
-/*
-#include <stdio.h>
-int main() 
-{
-	char	*str = "Wannabe";
-	char	*strcopy;
-	char	*strdupcpy;
-	
-	strcopy = "asedssd";
-	strdupcpy = "AESEDFERF";
-	printf("%s\n", str);
-	strcopy = strdup(str);
-	printf("%s\n", strcopy);
-	strdupcpy = ft_strdup(str);
-	printf("%s\n", strdupcpy);	
-}*/

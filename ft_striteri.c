@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 10:06:17 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/29 10:59:12 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/30 12:07:07 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,17 +26,3 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		}
 	}
 }
-/*
-void	ft_changechr(unsigned int i, char *w)
-{
-	*w += i;
-}
-
-
-int main()
-{
-	char	str[]="Hello World";
-	
-	ft_striteri(str, ft_changechr);
-	printf("%s\n", str);
-}*/

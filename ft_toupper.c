@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 09:58:45 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/22 14:44:11 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/30 12:27:39 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,3 @@ int	ft_toupper(int c)
 		c -= 32;
 	return (c);
 }
-/*
-#include <ctype.h>
-#include <stdio.h>
-int	main()
-{
-	unsigned char	l;
-	unsigned char	a;
-	
-	l = 'C';
-	a = toupper(l);
-	printf("%c", a);
-	printf("\n-----------\n");
-	a = ft_toupper(l);
-	printf("%c", a);
-}*/

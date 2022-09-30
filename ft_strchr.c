@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 10:33:35 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/26 15:08:57 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/30 12:27:12 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,3 @@ char	*ft_strchr(const char *s, int c)
 	}
 	return (&str[i]);
 }
-/*
-int	main()
-{
-	char	s[20] = "tripouille";
-	int		c;
-	
-	c = '\0';
-	printf("%s", strchr(s, 't' + 256));
-	printf("\n-----------\n");
-	printf("%s", ft_strchr(s, 't' + 256));
-}*/

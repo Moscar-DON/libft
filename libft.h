@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/13 10:32:33 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/29 10:24:36 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/30 12:59:28 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,7 @@
 # define LIBFT_H
 
 # include <unistd.h>
-# include <fcntl.h>
-# include <ctype.h>
-# include <string.h>
 # include <stdlib.h>
-
-# include <stdio.h>
 
 typedef struct s_list
 {
@@ -32,13 +27,13 @@ int		ft_isdigit(int num);
 int		ft_isalnum(int num);
 int		ft_isascii(int num);
 int		ft_isprint(int num);
-int		ft_strlen(char *str);
+size_t	ft_strlen(const char *s);
 void	*ft_memset(void *str, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
-int		ft_strlcpy(char *dest, char *src, size_t size);
-int		ft_strlcat(char *dest, char *src, size_t size);
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 char	*ft_strchr(const char *s, int c);

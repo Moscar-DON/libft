@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 17:57:06 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/22 14:47:43 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/30 12:27:01 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,19 +25,3 @@ void	*ft_memset(void *str, int c, size_t n)
 	}
 	return (str);
 }
-/*
-#include <string.h>
-#include <stdio.h>
-
-int main()
-{
-	char	str[]="Hello World";
-	int		c;
-	size_t	n;
-	
-	n = 4;
-	c = 'e';
-    printf("%s", ft_memset(str, c, n));
-	printf("\n-----------\n");
-    printf("%s", memset(str, c, n));   
-}*/

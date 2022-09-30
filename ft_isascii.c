@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 10:42:49 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/22 14:45:44 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/30 12:26:30 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,3 @@ int	ft_isascii(int num)
 		return (1);
 	return (0);
 }
-
-/*
-#include <ctype.h>
-#include <stdio.h>
-
-int main()
-{
-	printf("%d", ft_isascii(61));
-   printf("%d", isascii(61));  
-}
-*/

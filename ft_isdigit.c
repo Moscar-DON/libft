@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 15:46:27 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/22 14:46:03 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/30 12:26:32 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,3 @@ int	ft_isdigit(int num)
 		return (1);
 	return (0);
 }
-/*
-#include <ctype.h>
-#include <stdio.h>
-
-int main()
-{
-    unsigned char   c;
-    c = 1;
-	printf("%d", ft_isdigit(c));
-    printf("%d", isdigit(c));   
-}*/

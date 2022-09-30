@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 11:21:49 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/26 15:17:40 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/30 12:27:32 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,17 +28,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (0);
 }
-/*
-#include <string.h>
-#include <stdio.h>
-int	main()
-{
-	char	*s = "\0there is so many in this string !";
-	int		c;
-	
-	
-	c = '\0';
-	printf("%s", strrchr(s, c));
-	printf("\n-----------\n");
-	printf("%s", ft_strrchr(s, c));
-}*/

@@ -6,57 +6,37 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/14 12:11:16 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/26 12:17:12 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/30 16:00:39 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
+#include <stdio.h>
+#include <unistd.h>
 
-int	ft_strlcat(char *dest, char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	x;
 	size_t	y;
 	size_t	len_dest;
 	size_t	len_src;
 
-	if (!dest && size == 0)
+	if (!dst && dstsize == 0)
 		return (0);
-	x = ft_strlen(dest);
+	x = ft_strlen(dst);
 	y = 0;
-	len_dest = ft_strlen(dest);
+	len_dest = ft_strlen(dst);
 	len_src = ft_strlen(src);
-	if (size != 0)
+	if (dstsize <= x || dstsize == 0)
+		return (dstsize + len_src);
+	if (dstsize != 0)
 	{
-		while (src[y] != '\0' && (x < size - 1))
-			dest[x++] = src[y++];
-		dest[x] = '\0';
-		if (size > x)
+		while (src[y] != '\0' && (x < dstsize - 1))
+			dst[x++] = src[y++];
+		dst[x] = '\0';
+		if (dstsize > x)
 			return (len_dest + len_src);
-		if (size <= x || size == 0)
-			return (size + len_src);
 	}
-	return (size + len_src);
+	return (dstsize + len_src);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-int	main(void)
-{
-	printf("STRLCAT\n");
-	char    dest[20] = "ho";
-	char    src[6] = "mundo";
-	unsigned int	x;
-	x = strlcat(dest, src, 0);
-	printf("%i\n", x);
-	printf("%s\n", dest);
-
-
-	printf("--------------------\n");	
-	printf("FT_STRLCAT\n");
-	char    c[20] = "ho";
-	char    d[6] = "mundo";
-	x = ft_strlcat(c, d, 0);
-	printf("%i\n", x);
-	printf("%s\n", c);
-	return (0);
-}*/

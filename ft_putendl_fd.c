@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 11:38:10 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/29 12:20:03 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/30 12:02:25 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,3 @@ void	ft_putendl_fd(char *s, int fd)
 		write(fd, "\n", 1);
 	}
 }
-/*
-int main()
-{
-	int		fd;	
-	char	*c = "asdfgh";
-	fd = 1; //0 in, 1 out
-	ft_putendl_fd(c, fd);
-}*/

@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 16:37:16 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/23 11:15:52 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/30 12:27:31 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,18 +35,3 @@ char	*ft_strnstr(const char *str, const char *substr, size_t len)
 	}
 	return (0);
 }
-/*
-int main()
-{
-	char	*str = NULL;
-    char	*substr = "fake";
-    char	*ptr;
-	size_t		n;
-
-	n = ft_strlen(substr);
-    ptr = strnstr(str, substr, 0);
-    printf("%s", ptr);
-	printf("\n-----------\n");
-	ptr = ft_strnstr(str, substr, 0);
-    printf("%s", ptr);
-}*/

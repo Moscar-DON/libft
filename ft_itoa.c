@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 19:04:32 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/29 18:12:33 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/30 12:26:36 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,12 +75,3 @@ char	*ft_itoa(int n)
 	}
 	return (str);
 }
-/*
-int	main()
-{
-	int	n;
-
-	n = 0;
-	printf("%d\n", n);
-	printf("%s\n", ft_itoa(n));
-}*/

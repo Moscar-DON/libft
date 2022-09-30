@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 11:41:47 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/26 12:15:42 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/30 12:27:26 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,17 +28,3 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (cnt);
 }
-/*
-#include <string.h>
-#include <stdio.h>
-int	main()
-{
-	char	s1[20] = "omg1||||||||||||||||";
-	char	s2[20] = "omg2";
-	int		c;
-	
-	c = 4;
-	printf("%d", strncmp(s1, s2, c));
-	printf("\n-----------\n");
-	printf("%d", ft_strncmp(s1, s2, c));
-}*/

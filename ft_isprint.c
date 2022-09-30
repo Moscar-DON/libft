@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/12 16:42:00 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/22 16:38:49 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/30 12:26:35 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,3 @@ int	ft_isprint(int num)
 		return (0);
 	return (1);
 }
-
-/*
-#include <ctype.h>
-#include <stdio.h>
-
-int main()
-{
-    unsigned char   c;
-    c = 127;
-	printf("%d", ft_isprint(c));
-    printf("%d", isprint(c));   
-}*/

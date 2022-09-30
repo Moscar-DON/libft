@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 10:26:45 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/22 14:44:07 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/30 12:12:07 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,3 @@ int	ft_tolower(int c)
 		c += 32;
 	return (c);
 }
-/*
-#include <ctype.h>
-#include <stdio.h>
-int	main()
-{
-	unsigned char	l;
-	unsigned char	a;
-	
-	l = 'z';
-	a = tolower(l);
-	printf("%c", a);
-	printf("\n-----------\n");
-	a = ft_tolower(l);
-	printf("%c", a);
-}*/

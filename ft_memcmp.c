@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 14:00:33 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/22 14:47:29 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/30 12:26:55 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,15 +32,3 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	}
 	return (cnt);
 }
-/*
-int main()
-{
-	char	str1[]="Hello \0World";
-	char	str2[]="Hello \0Worlt";
-	size_t	n;
-	
-	n = 15;
-    printf("%d", ft_memcmp(str1, str2, n));
-	printf("\n-----------\n");
-    printf("%d", memcmp(str1, str2, n));   
-}*/

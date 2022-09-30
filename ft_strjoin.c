@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/18 16:25:18 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/23 18:36:56 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/30 12:27:18 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		str[lens1++] = s2[i];
 	return (str);
 }
-/*
-int	main()
-{
-	char	str[] = "Hola ";
-	char	str2[] = "Mundo";
-	char	*sub;
-
-	sub = ft_strjoin(str, str2);
-	printf("%s\n", sub);
-}*/

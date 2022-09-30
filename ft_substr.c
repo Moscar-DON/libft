@@ -6,7 +6,7 @@
 /*   By: operez-d <operez-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 18:00:39 by operez-d          #+#    #+#             */
-/*   Updated: 2022/09/28 11:42:15 by operez-d         ###   ########.fr       */
+/*   Updated: 2022/09/30 12:27:35 by operez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,16 +40,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	sub[i] = '\0';
 	return (sub);
 }
-/*
-int	main()
-{
-	char	str[] = "tripouille";
-	char	*sub;
-	int		pos;
-	int		len;
-	
-	pos = 0;
-	len = 42000;
-	sub = ft_substr(str, pos, len);
-	printf("%s\n", sub);
-}*/
